@@ -40,7 +40,7 @@ html{
     display: block;
     border-radius: 50%;
     margin: auto;
-    animation: move-wheel .5s linear infinite;
+    animation: move-wheel 1s linear infinite;
 }
 
 .arrow span{
@@ -51,12 +51,33 @@ html{
     border-right-color: rgb(143, 214, 12);
     border-bottom-color: rgb(143, 214, 12);
     transform: rotate(45de);
+    animation: arrow-down .5s alternate infinite ;
 }
 
 @keyframes move-wheel {
     0%{
         opacity: 0%;
         transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(1rem);
+           }
+}
+
+@keyframes arrow-down {
+    0%{
+        opacity: 0%;
+        transform: translateY(-1rem);
+    }
+    25%{
+        opacity: .25%;
+    }
+    50%{
+        opacity: .5%;
+    }
+    75%{
+        opacity: .75%;
     }
     100%{
         opacity: 1;
